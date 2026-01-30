@@ -3,3 +3,4 @@ ttkbootstrap
 mutagen
 tkinterdnd2
 pygame
+pathlib

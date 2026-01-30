@@ -1,71 +1,45 @@
-# 🎵 Music Forge
-Professional Audio Compiler & Processor
+# 🎵 Music Forge Pro
 
-**Version:** 1.1.5
-**Developer:** Guillaume Lessard — iD01t Productions
+**Professional Audio Suite & Batch Processor**
+
+**Version:** 1.2.0 (Manus Upgrade Edition)
+**Developer:** Guillaume Lessard — iD01t Productions & Manus AI
 **Website:** [https://www.id01t.ca](https://www.id01t.ca)
-**Support:** [itechinfomtl@gmail.com](mailto:itechinfomtl@gmail.com)
 
-Music Forge is a **store-ready, professional-grade audio batch processor** with a modern dark UI. Built for Windows with full FFmpeg integration, it compiles and processes audio locally, ensuring **speed, quality, and privacy**.
+Music Forge Pro is a major upgrade to the original Music Forge app, featuring a completely modernized UI, parallel processing engine, and advanced audio manipulation tools.
 
 ---
 
-## ✨ Features
+## ✨ New in Version 1.2.0
 
-* **Batch Processing** — Add multiple files or entire folders at once.
-* **High-Quality Audio Output** — MP3, WAV, FLAC, OGG, and M4A formats.
-* **Professional Presets** — High MP3, Lossless, Podcast, Voice Note.
-* **Audio Enhancements**:
-
-  * Loudness normalization
-  * Silence trimming
-  * Custom sample rates and channels
-* **FFmpeg Auto-Detection** — Works if `ffmpeg.exe` is in the same folder, in `./bin`, or in your PATH.
-* **Dark Mode UI** — Powered by [`ttkbootstrap`](https://github.com/israel-dryer/ttkbootstrap) with graceful fallback to native Tkinter.
-* **Windows Taskbar Integration** — Proper AppID and icon grouping.
-* **HiDPI Awareness** — Crisp UI on modern displays.
-* **Local Processing Only** — No file uploads, full offline privacy.
+*   **Modern Sidebar UI** — Streamlined navigation between Queue, Processor, Player, and Settings.
+*   **Parallel Processing Engine** — Utilize all your CPU cores for lightning-fast batch audio conversion.
+*   **Advanced Audio Filters**:
+    *   **Fade In/Out** — Customizable durations for smooth transitions.
+    *   **Pitch & Speed Control** — Adjust audio tempo and pitch independently.
+    *   **Noise Reduction** — Intelligent FFmpeg-based noise floor reduction.
+    *   **Loudness Normalization** — Broadcast-standard (EBU R128) normalization.
+*   **Enhanced Metadata** — Support for extended tags including Year, Genre, and Track Number.
+*   **Real-time Waveform** — Visual feedback in the built-in audio player.
+*   **Modular Architecture** — Clean, maintainable codebase for future expansions.
 
 ---
 
 ## 📦 Requirements
 
-* **OS:** Windows 10/11 (x64)
-* **Optional:** `ffmpeg.exe` for local bundling and processing.
+*   **Python 3.8+**
+*   **FFmpeg** (Auto-detected or via `FFMPEG_PATH`)
+*   **Dependencies:** `pillow`, `ttkbootstrap`, `mutagen`, `tkinterdnd2`, `pygame`
 
 ---
 
 ## 🚀 Quick Start
 
-1. **Launch** Music Forge.
-2. **Add Files** or an entire folder.
-3. **Choose a Preset** or manually set:
-
-   * Output format
-   * Quality
-   * Sample rate
-   * Channels
-   * Optional normalization and silence trimming
-4. **Select Output Folder**.
-5. **Click** `🚀 Compile Music`.
-
----
-
-## 🔧 Advanced Usage
-
-* **Custom Presets:** You can create your own by modifying the in-app settings.
-* **FFmpeg Path Override:**
-  Set the environment variable `FFMPEG_PATH` to your preferred `ffmpeg` binary.
-* **Icon Customization:**
-  Place `icon.ico` or `icon.png` in the app folder or in `assets_music_forge`.
-
----
-
-## 📂 File Processing Notes
-
-* Progress bar and log output keep you updated.
-* All logs are stored in-app (not written to disk unless exported).
-* Output files are saved to your selected folder without overwriting originals.
+1.  **Launch** Music Forge Pro: `python main.py`.
+2.  **Queue**: Drag and drop your audio files into the Queue view.
+3.  **Processor**: Configure your output format, quality, and advanced effects.
+4.  **Settings**: Customize the theme (Cyborg, Darkly, Solar, etc.) and parallel worker count.
+5.  **Compile**: Click `🚀 Start Batch Processing` to begin.
 
 ---
 
@@ -73,24 +47,14 @@ Music Forge is a **store-ready, professional-grade audio batch processor** with 
 
 ```bash
 # Install dependencies
-pip install pillow ttkbootstrap
-
-# Optional: For Windows EXE build
-pip install pyinstaller
+pip install -r requirements.txt
 
 # Run directly
 python main.py
-
-# Build executable
-pyinstaller --noconsole --onefile ^
-  --name "MusicForge" ^
-  --icon "assets_music_forge/icon.ico" ^
-  main.py
 ```
 
 ---
 
 ## 📄 License
 
-MIT License © 2025 Guillaume Lessard — iD01t Productions
-
+MIT License © 2026 iD01t Productions & Manus AI
